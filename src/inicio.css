@@ -1,0 +1,239 @@
+/* ================================================= */
+/* RESET GENERAL                                     */
+/* ================================================= */
+/* Quita márgenes y rellenos por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Hace que el tamaño incluya padding y borde */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================================================= */
+/* CUERPO DE LA PÁGINA                               */
+/* ================================================= */
+body {
+    background-color: #f8f7f5; /* Color de fondo general */
+    color: #111010;              /* Color del texto */
+    line-height: 1.5;         /* Espaciado entre líneas */
+}
+
+/* ================================================= */
+/* HEADER (ENCABEZADO SUPERIOR)                      */
+/* ================================================= */
+.encabezado-inicio {
+    position: relative;          /* Permite usar z-index */
+    z-index: 10;                 /* Mantiene el header encima del video */
+    display: flex;               /* Pone logo y menú en una fila */
+    align-items: center;         /* Centra verticalmente */
+    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+    padding: 15px 5px;          /* Espacio interno del header */
+    height: 100px;                /* Altura del header */
+    background-color: #fcfcff;   /* Fondo blanco */
+    border-bottom: 1px solid #080808; /* Línea inferior */
+}
+
+/* ================= LOGO ================= */
+.logo-container {
+    display: flex;              /* Permite alinear el logo */
+    align-items: center;
+}
+
+.logo {
+    height: 120px;               /* Tamaño del logo */
+    width: auto;                /* Mantiene proporción */
+    margin-left: 30px;        /* mover  a la izquierda el logo*/
+}
+
+/* Ocultamos el H1 para que no estorbe visualmente */
+.encabezado-inicio h1 {
+    display: none;
+}
+
+/* ================= MENÚ ================= */
+.encabezado-inicio nav {
+    margin-right: 40px;
+}
+
+.encabezado-inicio nav ul {
+    list-style: none;           /* Quita los puntos de la lista */
+    display: flex;              /* Menú en línea */
+    gap: 30px;                  /* Espacio entre enlaces */
+}
+
+/* Estilos para los enlaces del menú */
+.encabezado-inicio nav ul li a {
+    text-decoration: none; /* Quita subrayado */
+    color: #333333; /* Color del texto del menú */
+    font-weight: bold; /* Texto en negrita para resaltar */
+    padding: 8px 9.9px;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para hover */
+}
+
+
+/* Color cuando pasas el mouse */
+.encabezado-inicio nav ul li a:hover {
+    color: #cfae30;
+     border-radius: 4px;
+}
+
+/* ================================================= */
+/* HERO (SECCIÓN CON VIDEO DE FONDO)                 */
+/* ================================================= */
+#hero {
+    position: relative;         /* Contenedor principal */
+    width: 100%;                /* Todo el ancho */
+    height: 100vh;              /* Toda la pantalla */
+    overflow: hidden;           /* Oculta lo que sobresale */
+}
+
+/* ================= VIDEO ================= */
+#hero video {
+    position: absolute;         /* Se coloca dentro del hero */
+    top: 0;
+    left: 0;
+    width: 100%;                /* Cubre todo el ancho */
+    height: 100%;               /* Cubre toda la altura */
+    object-fit: cover;          /* Recorta sin deformar */
+    z-index: 1;                 /* Capa más baja */
+}
+
+/* ================= Botones sobre el servicios ================= */
+.botones-separados {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espacio horizontal entre botones */
+}
+
+/* BOTONES INDIVIDUALES */
+.boton-hero {
+    background-color: #c62828;     /* Rojo fuerte como en la imagen */
+    color: white;                  /* Texto blanco */
+    padding: 14px 28px;            /* Espaciado interno */
+    border-radius: 30px;            /* Bordes redondeados */
+    text-decoration: none;         /* Sin subrayado */
+    font-weight: bold;             /* Texto en negrita */
+    font-size: 16px;               /* Tamaño de fuente */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra suave */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.boton-hero:hover {
+    background-color: #030303;     /* Rojo más oscuro al pasar el mouse */
+    transform: scale(1.05);        /* Efecto de agrandamiento */
+}
+
+   
+/* ================= CAPA OSCURA ================= */
+.capa {
+    position: absolute;         /* Encima del video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;          /* Color negro */
+    opacity: 0.6;               /* Transparencia */
+    z-index: 2;                 /* Entre video y texto */
+}
+
+/* ================= TEXTO DEL HERO ================= */
+.promo {
+    position: relative;         /* Para respetar el orden de capas */
+    z-index: 3;                 /* Encima de todo */
+    color: rgb(233, 228, 228);               /* Texto blanco */
+    padding: 180px 80px;        /* Posición del texto */
+    max-width: 600px;           /* Ancho máximo del texto */
+}
+
+.promo h1 {
+    font-size: 48px;            /* Tamaño del título */
+    margin-bottom: 15px;
+}
+
+.promo p {
+    font-size: 20px;            /* Tamaño del subtítulo */
+}
+
+/*---------------------------------------*/
+/*--Debajo del video las sub secciones--*/
+/*---------------------------------------*/
+.titulo {
+    font-family: 'open Sans', 'Sans-serif'; /* Tipo de letra */
+    text-align:center; /* Alineación del texto al centro */
+    font-size: 36px; /* Tamaño de la letra */
+    font-weight: 700; /* Grosor de la letra */
+    color:#092b50; /* Color de la letra */
+    margin-top: 60px; /* Espacio arriba del titulo */
+    margin-bottom: 20px; /* Espacio debajo del titulo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave para resaltar el texto */
+    animation: aparecer 2s ease-out forwards; /* Animación de aparición */
+    animation-delay: 0.5s; /* Retraso antes de que comience la animación */
+    opacity: 0; /* Inicialmente invisible */
+}
+
+/* Animación de entrada */
+@keyframes aparecer {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.inicio-nosotros{
+    background-color: #f0f8ff;   /* Color de fondo suave */
+    border: 2px solid #1f1d1d;    /* Borde gris claro */
+    border-radius: 8px;     /* Bordes redondeados */
+    padding: 35px;       /* Espaciado interno */
+    margin:0 auto 40px;    /* Centrado horizontal y espacio inferior */
+    max-width: 800px;     /* Ancho máximo del contenedor */
+    box-shadow: 0 4px 8px rgba(66,58,58,0.459); /* Sombra para dar profundidad */
+    font-size: 18px;      /* Tamaño de fuente legible */
+    color: #070606;     /* Color de texto oscuro */
+    text-align: justify;    /* Justificación del texto */
+}
+/*----------------------------------------------------*/
+/*---------Logo de enlace a Whatsapp------------------*/
+/*----------------------------------------------------*/
+.whatsapp-enlace{
+    position: fixed; /* Fija el botón en la pantalla */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la parte derecha */
+    z-index: 100; /* Asegura que el botón esté por encima de otros elementos */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    border-radius: 100%; /* Hace el botón circular */
+    display: flex; /* Centra la imagen */
+    box-shadow: 0 4px 6px rgb(31, 61, 31); /* Sombra para dar profundidad */
+    transition: transform 1.5s ease; /* Transición suave para el efecto hover */
+      overflow: hidden; /*  corta el fondo negro */
+}
+
+/* Estilos para la imagen dentro del enlace de WhatsApp */
+.whatsapp-enlace:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+}
+
+/* Estilos para la imagen dentro del enlace de WhatsApp */
+.whatsapp-enlace img {
+    width: 68px; /* La imagen ocupa todo el ancho del botón */
+    height: 60px; /* La imagen ocupa todo el alto del botón */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+}
+
+/* ================================================= */
+/* FOOTER (PIE DE PÁGINA)                            */
+/* ================================================= */
+footer {
+    text-align: center;         /* Texto centrado */
+    padding: 20px;
+    background-color: #1e3a5f;  /* Fondo azul */
+    color: #e0d6d6;             /* Texto claro */
+    margin-top: 40px;
+}

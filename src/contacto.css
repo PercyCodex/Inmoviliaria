@@ -1,0 +1,178 @@
+/*-----------------------------------------*/
+/*General Styles*/
+/*-----------------------------------------*/
+/*Quita margenes y rellenos por defecto del navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*HAce que el tamaño del elemento sea consistente con el contenido*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*-----------------------------------------*/
+/*Cuerpo de la pagina*/
+/*-----------------------------------------*/
+body {
+    background-color: #e5e8eb; /* Color de fondo suave */
+    color:#1f1f1f; /* Color de texto oscuro para buena legibilidad */
+    line-height: 1.5; /* Espaciado entre líneas para mejorar la lectura */
+}
+
+/*-----------------------------------------*/
+/*Encabezado de la pagina Superior*/
+/*-----------------------------------------*/
+.encabezado-contacto {
+    position:relative;  /* Permite posicionar elementos hijos de forma absoluta */
+    z-index: 10; /* Asegura que el encabezado esté por encima de otros elementos */
+    display: flex; /* Pone logo y menu en una fila*/
+    align-items: center; /* Centra verticalmente los elementos dentro del encabezado */
+    justify-content: space-between; /* Espacia los elementos al máximo */
+    padding: 15px 5px; /* Espaciado interno del encabezado */
+    height: 100px; /* Altura del encabezado */
+    background-color: #fcfcfc; /* Color de fondo del encabezado */
+    border-bottom: 1px solid #ac4646; /* Línea inferior para separar el encabezado del contenido */
+}
+
+/*-----------------------------------------*/
+/*Logo de la empresa*/  
+/*-----------------------------------------*/
+/* Contenedor del logo para facilitar el posicionamiento */
+.logo-container {
+    height: 100px;  /* Asegúrate de que el logo tenga la misma altura en todas las páginas */
+    width: auto;    /* Mantiene la proporción */
+    display:flex;
+    align-items: center;
+}
+
+/* Ajustes específicos para el logo de la empresa */
+.logo {
+    height: 120px; /* Ajusta la altura del logo según sea necesario */
+    width: auto; /* Mantiene la proporción del logo */
+    margin-left:30px; /*mover a la isquierda el logo*/
+}
+
+/*-----------------------------------------*/
+/*Menú de navegación, como inicio, nosotors, condominios, proyectos, inversiones, contacto*/
+/*-----------------------------------------*/
+
+/* Estilos para el menú de navegación dentro del encabezado */
+.encabezado-contacto nav {
+     margin-right: 40px; /* Espacio a la derecha del menú */
+}
+
+.encabezado-contacto nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Muestra los elementos en una fila */
+    gap: 30px; /* Espacio entre los elementos del menú */
+}
+
+/* Estilos para los enlaces del menú de navegación */
+.encabezado-contacto nav ul li a {
+    text-decoration: none; /* Quita subrayado */
+    color: #333333; /* Color del texto del menú */
+    font-weight: bold; /* Texto en negrita para resaltar */
+    padding: 8px 9.9px;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para hover */
+}
+
+/* Efecto al pasar el ratón sobre los enlaces del menú */
+.encabezado-contacto nav ul li a:hover {
+    color: #a78937; /* Color del texto al pasar el ratón */
+}
+
+/*-----------------------------------------*/
+/*Sección del cuerpo de la página*/
+/*-----------------------------------------*/
+.contacto_html{
+    font-family: 'open Sans', 'Sans-serif'; /* Tipo de letra */
+    text-align:center; /* Alineación del texto al centro */
+    font-size: 36px; /* Tamaño de la letra */
+    font-weight: 700; /* Grosor de la letra */
+    color:#092b50; /* Color de la letra */
+    margin-top: 60px; /* Espacio arriba del titulo */
+    margin-bottom: 20px; /* Espacio debajo del titulo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave para resaltar el texto */
+    animation: aparecer 2s ease-out forwards; /* Animación de aparición */
+    animation-delay: 0.5s; /* Retraso antes de que comience la animación */
+    opacity: 0; /* Inicialmente invisible */
+}
+
+/* Animación para hacer que el formulario aparezca suavemente */
+@keyframes aparecer {
+    from {
+        transform: translateY(-40px); /* Posición final */
+        opacity: 0; /* Opacidad final */
+    }
+    to{
+        transform: translateY(0); /* Posición final */
+        opacity: 1; /* Opacidad final */
+    }
+}
+
+/*-----------------------------------------*/
+/*Estilos para los asesores*/   
+/*-----------------------------------------*/
+.asesor{
+    background-color: #f0f8ff;   /* Color de fondo suave */
+    border: 2px solid #1f1d1d;    /* Borde gris claro */
+    border-radius: 8px;     /* Bordes redondeados */
+    padding: 20px;       /* Espaciado interno */
+    margin:0 auto 40px;    /* Centrado horizontal y espacio inferior */
+    max-width: 600px;     /* Ancho máximo del contenedor */
+    box-shadow: 0 4px 8px rgba(66,58,58,0.459); /* Sombra para dar profundidad */
+    font-size: 18px;      /* Tamaño de fuente legible */
+    color: #070606;     /* Color de texto oscuro */
+    text-align: justify;    /* Justificación del texto */
+}
+
+/*----------------------------------------------------*/
+/*---------Logo de enlace a Whatsapp------------------*/
+/*----------------------------------------------------*/
+.whatsapp-enlace{
+    position: fixed; /* Fija el botón en la pantalla */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la parte derecha */
+    z-index: 100; /* Asegura que el botón esté por encima de otros elementos */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    border-radius: 100%; /* Hace el botón circular */
+    display: flex; /* Centra la imagen */
+    box-shadow: 0 4px 6px rgb(31, 61, 31); /* Sombra para dar profundidad */
+    transition: transform 1.5s ease; /* Transición suave para el efecto hover */
+      overflow: hidden; /*  corta el fondo negro */
+}
+
+/* Estilos para la imagen dentro del enlace de WhatsApp */
+.whatsapp-enlace:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+    
+}
+
+/* Estilos para la imagen dentro del enlace de WhatsApp */
+.whatsapp-enlace img {
+    width: 68px; /* La imagen ocupa todo el ancho del botón */
+    height: 60px; /* La imagen ocupa todo el alto del botón */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+    
+}
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------*/
+/*Pie de página*/
+/*-----------------------------------------*/
+footer{
+    text-align: center; /* Centra el texto del pie de página */
+    padding: 20px; /* Espaciado interno del pie de página */
+    background-color: #103e66; /* Color de fondo del pie de página */
+    color: #f7eded; /* Color del texto del pie de página */
+    margin-top: 40px; /* Espacio superior del pie de página */
+}
+

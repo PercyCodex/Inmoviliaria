@@ -1,0 +1,209 @@
+/* =================== RESET GENERAL =================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+/* =================== ENCABEZADO =================== */
+.encabezado-nosotros {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5px;
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #0c0c0c;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 120px;
+    width: auto;
+    margin-left: 30px; ;
+}
+
+.encabezado-nosotros h1 {
+    display: none;
+}
+
+.encabezado-nosotros nav {
+    margin-right: 40px;
+}
+
+.encabezado-nosotros nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.encabezado-nosotros nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    padding: 8px 9.9px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.encabezado-nosotros nav ul li a:hover {
+    color: #cfae30;
+    border-radius: 4px;
+}
+
+/* =================== BANNER NOSOTROS =================== */
+
+.presentacion-nosotros {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('nosotros_html.jpg');
+    background-size: cover;  /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center;  /* Centra la imagen */
+    background-attachment: scroll; /* Fondo fijo al hacer scroll */
+    display: flex;   /* Para centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center;  /* Centra horizontalmente */
+}
+
+.contenido-Presentacion-nosotros {
+    width: 100%;    /* Ocupa todo el ancho del contenedor */
+    padding: 40px 20px;/* Espaciado interno */
+    display: flex;  /* Para centrar el contenido */
+    flex-direction: column;/* Alinea los elementos en columna */
+    align-items: center;/* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    color: #fff; /* Color del texto */
+    text-align: center;/* Centra el texto */
+    background: rgba(49, 47, 47, 0.5);/* Fondo semi-transparente para mejorar la legibilidad */
+}
+
+.titulo-nosotros {
+    font-size: 48px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.subtitulo-nosotros {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.botones-nosotros {
+
+    display: flex;
+    gap: 20px;
+    
+}
+
+
+/* BOTONES INDIVIDUALES */
+.boton-rojo {
+    background-color: #c62828;     /* Rojo fuerte como en la imagen */
+    color: white;                  /* Texto blanco */
+    padding: 14px 28px;            /* Espaciado interno */
+    border-radius: 30px;            /* Bordes redondeados */
+    text-decoration: none;         /* Sin subrayado */
+    font-weight: bold;             /* Texto en negrita */
+    font-size: 16px;               /* Tamaño de fuente */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra suave */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.boton-rojo:hover {
+    background-color: #030303;     /* Rojo más oscuro al pasar el mouse */
+    transform: scale(1.05);        /* Efecto de agrandamiento */
+}
+
+/* =================== CONTENIDO NOSOTROS =================== */
+.contenido-nosotros {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    color: #2c2c2c;
+    text-align: center;
+}
+
+.introduccion_html,
+.mision_html,
+.vision_html,
+.objetivos_html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.descripcion_introduccion,
+.descripcion_mision,
+.descripcion_vision,
+.descripcion_objetivos {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #2c2c2c;
+}
+
+/* =================== PIE DE PÁGINA =================== */
+footer,
+.footer-nosotros {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* =================== WHATSAPP =================== */
+.whatsapp-enlace {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    box-shadow: 0 4px 6px rgb(31, 61, 31);
+    transition: transform 1.5s ease;
+    overflow: hidden;
+}
+
+.whatsapp-enlace:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-enlace img {
+    width: 68px;
+    height: 60px;
+    object-fit: contain;
+}
+
+
+
+/*-----------------------------------------*/
+/*Pie de página*/
+/*-----------------------------------------*/
+.footer-nosotros {
+    background-color: #333333; /* Color de fondo oscuro */
+    color: #ffffff; /* Color de texto claro */
+    text-align: center; /* Centra el texto */
+    padding: 20px 0; /* Espaciado interno del pie de página */
+    margin-top: 40px; /* Espacio encima del pie de página */
+}
